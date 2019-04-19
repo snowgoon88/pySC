@@ -400,6 +400,26 @@ def list_all_ships( session ):
         print( player.name )
         for ship in player.ships.itervalues():
             print( "  "+ship.gamename+" : "+ship.get_fullname() )
+
+
+# ******************************************************************************
+# ******************************************************************* INTERACTIV
+def help():
+    msg = """Commandes:
+- read_lines( pathname ) : read all lines and create _all_sessions
+- nb_sess() : get number of sessions
+- sess( int ) : return the given session
+- list_unknown_ship( sess )
+- list_all_ships( sess )
+- Session:: to_str(), 
+"""
+    print( msg )
+def nb_sess():
+    return len(_all_sessions)
+def sess(ids):
+    return _all_sessions[ids]
+
+
 # ******************************************************************************
 # ************************************************************************* Main
 # ******************************************************************************
